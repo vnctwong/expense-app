@@ -6,7 +6,6 @@ const ExpenseForm = () => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
-
   // const [userInput, setUserInput] = useState({
   //   enteredTitle: '',
   //   enteredAmount: '',
@@ -15,7 +14,6 @@ const ExpenseForm = () => {
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
-
     // setUserInput((prevState) => {
     //   return { ...prevState, enteredTitle: event.target.value };
     // });
@@ -23,7 +21,6 @@ const ExpenseForm = () => {
 
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
-
     // setUserInput((prevState) => {
     //   return { ...prevState, enteredAmount: event.target.value };
     // });
@@ -31,7 +28,6 @@ const ExpenseForm = () => {
 
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
-
     // setUserInput((prevState) => {
     //   return { ...prevState, enteredDate: event.target.value };
     // });
@@ -47,6 +43,7 @@ const ExpenseForm = () => {
     };
 
     console.log(expenseData);
+
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
@@ -54,6 +51,7 @@ const ExpenseForm = () => {
 
   return (
     <form onSubmit={submitHandler} >
+
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -86,6 +84,7 @@ const ExpenseForm = () => {
       <div className="new-expense__actions" >
         <button type="submit">Add expense</button>
       </div>
+
     </form>
   )
 };
